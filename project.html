@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/project.css" />
+    <title>project</title>
+  </head>
+  <body>
+    <div class="container py-4">
+      <div class="form-group">
+        <label for="productNameInput">productName:</label>
+        <input class="form-control" type="text" id="productNameInput" />
+      </div>
+
+      <div class="form-group">
+        <label for="productPriceInput">productPrice:</label>
+        <input class="form-control" type="number" id="productPriceInput" />
+      </div>
+
+      <div class="form-group">
+        <label for="productCatInput">productCat:</label>
+        <input class="form-control" type="text" id="productCatInput" />
+      </div>
+
+      <div class="form-group">
+        <label for="productDescInput">productDesc:</label>
+        <textarea
+          class="form-control"
+          type="text"
+          id="productDescInput"
+        ></textarea>
+      </div>
+      <button
+        class="btn btn-outline-info"
+        onclick="addProduct();"
+        id="mainButtton"
+      >
+        addProduct
+      </button>
+    </div>
+    <div class="container">
+      <input
+        type="text"
+        class="form-control w-75 m-auto"
+        placeholder="search by name"
+        onkeyup="searchProduct(this.value)"
+      />
+      <table class="table mt-4">
+        <thead>
+          <th>index</th>
+          <th>productName</th>
+          <th>productPrice</th>
+          <th>productCat</th>
+          <th>productDesc</th>
+          <th>update</th>
+          <th>delete</th>
+        </thead>
+        <tbody id="tableBody"></tbody>
+      </table>
+    </div>
+    <script src="js/project.js"></script>
+  </body>
+</html>
